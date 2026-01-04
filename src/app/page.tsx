@@ -1,4 +1,5 @@
 import { ArrowRight, Download, Star, CheckCircle, Camera, Monitor, Mic, Shield, Users, Zap, Volume2, User, Settings, Mail, MousePointer, Maximize2, Keyboard, Globe, Headphones, Video, Grid3x3 } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -24,31 +25,52 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
-            Professional Mac
-            <span className="text-blue-600 dark:text-blue-400"> Screen Recording</span>
-            <br />
-            for Creators
-          </h1>
-          
-          <p className="text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-4xl mx-auto leading-relaxed">
-            LensFlowPro is a lightweight, native macOS screen recording application built with ScreenCaptureKit and AVFoundation. 
-            Unlike electron-based alternatives, LensFlowPro runs natively on your Mac with minimal CPU and memory usage.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-600 dark:text-slate-300 mb-10">
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span>Native macOS app - No Electron bloat</span>
+        <div className="max-w-7xl mx-auto">
+          <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+                Record Your Mac
+                <span className="text-blue-600 dark:text-blue-400"> Like a Pro</span>
+              </h1>
+
+              <p className="text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                Native macOS screen recording with professional features. Built for creators, developers, and educators.
+              </p>
+
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm text-slate-600 dark:text-slate-300 mb-10">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span>Native Performance</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span>Multi-Track Audio</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span>Camera Overlays</span>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors">
+                  Get LensFlowPro
+                </button>
+                <button className="border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 px-8 py-3 rounded-full font-semibold transition-colors">
+                  View Features
+                </button>
+              </div>
             </div>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span>Minimal CPU & memory usage</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span>Professional recording features</span>
+
+            <div className="mt-12 lg:mt-0">
+              <Image
+                src="/Screenshot-2025-12-30-at-22-04-32-1.png"
+                alt="LensFlowPro user interface showing screen recording controls and camera overlay"
+                width={1200}
+                height={700}
+                className="w-full rounded-lg shadow-xl"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -65,28 +87,28 @@ export default function Home() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-6 rounded-xl">
-              <Users className="h-8 w-8 text-blue-600 mb-4" />
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Content Creators</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300">Create tutorials, demos, and walkthroughs with professional camera overlays</p>
+            <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+              <Users className="h-10 w-10 text-blue-600 mb-4" />
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Content Creators</h3>
+              <p className="text-slate-600 dark:text-slate-300">Tutorials, demos, walkthroughs</p>
             </div>
-            
-            <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 p-6 rounded-xl">
-              <Zap className="h-8 w-8 text-green-600 mb-4" />
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Developers</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300">Record bug reproductions, code tutorials, and presentations</p>
+
+            <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+              <Zap className="h-10 w-10 text-green-600 mb-4" />
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Developers</h3>
+              <p className="text-slate-600 dark:text-slate-300">Bug reports, code reviews, presentations</p>
             </div>
-            
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 p-6 rounded-xl">
-              <Monitor className="h-8 w-8 text-purple-600 mb-4" />
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Educators</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300">Capture lessons with picture-in-picture webcam and screen magnification</p>
+
+            <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+              <Monitor className="h-10 w-10 text-purple-600 mb-4" />
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Educators</h3>
+              <p className="text-slate-600 dark:text-slate-300">Online courses, training videos</p>
             </div>
-            
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 p-6 rounded-xl">
-              <Video className="h-8 w-8 text-orange-600 mb-4" />
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Remote Workers</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300">Record Zoom alternatives, async video messages, and screen shares</p>
+
+            <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+              <Video className="h-10 w-10 text-orange-600 mb-4" />
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Remote Workers</h3>
+              <p className="text-slate-600 dark:text-slate-300">Async messages, screen shares</p>
             </div>
           </div>
         </div>
