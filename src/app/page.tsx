@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Star, CheckCircle, Camera, Monitor, Mic, Shield, Users, Zap, Volume2, User, Settings, Mail } from 'lucide-react';
+import { ArrowRight, Download, Star, CheckCircle, Camera, Monitor, Mic, Shield, Users, Zap, Volume2, User, Settings, Mail, MousePointer, Maximize2, Keyboard, Globe, Headphones, Video, Grid3x3 } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
+              <img src="/icon1.png" alt="LensFlowPro Icon" className="h-6 w-6" />
               <Monitor className="h-8 w-8 text-blue-600" />
               <span className="text-xl font-bold text-slate-900 dark:text-white">LensFlowPro</span>
             </div>
@@ -32,68 +33,60 @@ export default function Home() {
           </h1>
           
           <p className="text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-4xl mx-auto leading-relaxed">
-            LensFlowPro is built for creators, educators, indie developers, and teams who record frequently every day. 
-            Minimal interface, stable performance, and focused on screen recording and narration without unnecessary complexity.
+            LensFlowPro is a lightweight, native macOS screen recording application built with ScreenCaptureKit and AVFoundation. 
+            Unlike electron-based alternatives, LensFlowPro runs natively on your Mac with minimal CPU and memory usage.
           </p>
           
           <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-600 dark:text-slate-300 mb-10">
             <div className="flex items-center space-x-2">
               <CheckCircle className="h-5 w-5 text-green-500" />
-              <span>One-time purchase, no subscription</span>
+              <span>Native macOS app - No Electron bloat</span>
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="h-5 w-5 text-green-500" />
-              <span>All processing done locally</span>
+              <span>Minimal CPU & memory usage</span>
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="h-5 w-5 text-green-500" />
-              <span>Optimized for creators</span>
+              <span>Professional recording features</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Who is it for Section */}
+      {/* Perfect For Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
-              Who is it
-              <span className="text-blue-600 dark:text-blue-400"> for?</span>
+              🎬 Perfect
+              <span className="text-blue-600 dark:text-blue-400"> For</span>
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="flex items-start space-x-4">
-              <Users className="h-8 w-8 text-blue-600 mt-1 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Content Creators</h3>
-                <p className="text-slate-600 dark:text-slate-300">YouTube / Bilibili / Xiaohongshu creators who need high-quality screen recording</p>
-              </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-6 rounded-xl">
+              <Users className="h-8 w-8 text-blue-600 mb-4" />
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Content Creators</h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300">Create tutorials, demos, and walkthroughs with professional camera overlays</p>
             </div>
             
-            <div className="flex items-start space-x-4">
-              <Monitor className="h-8 w-8 text-green-600 mt-1 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Educators</h3>
-                <p className="text-slate-600 dark:text-slate-300">Teachers, organizations, and instructors recording online courses and training videos</p>
-              </div>
+            <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 p-6 rounded-xl">
+              <Zap className="h-8 w-8 text-green-600 mb-4" />
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Developers</h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300">Record bug reproductions, code tutorials, and presentations</p>
             </div>
             
-            <div className="flex items-start space-x-4">
-              <Zap className="h-8 w-8 text-purple-600 mt-1 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Developers</h3>
-                <p className="text-slate-600 dark:text-slate-300">Indie developers and teams who need to demo products or create app preview videos</p>
-              </div>
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 p-6 rounded-xl">
+              <Monitor className="h-8 w-8 text-purple-600 mb-4" />
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Educators</h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300">Capture lessons with picture-in-picture webcam and screen magnification</p>
             </div>
             
-            <div className="flex items-start space-x-4">
-              <Settings className="h-8 w-8 text-orange-600 mt-1 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Teams</h3>
-                <p className="text-slate-600 dark:text-slate-300">Companies and internal teams who need to record how-to tutorials and onboarding training videos</p>
-              </div>
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 p-6 rounded-xl">
+              <Video className="h-8 w-8 text-orange-600 mb-4" />
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Remote Workers</h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300">Record Zoom alternatives, async video messages, and screen shares</p>
             </div>
           </div>
         </div>
